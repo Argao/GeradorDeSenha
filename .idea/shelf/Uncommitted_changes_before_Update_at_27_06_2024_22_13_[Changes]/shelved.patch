@@ -1,0 +1,109 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:id=\"@+id/main\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <TextView\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Hello World!\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\"\n        app:layout_constraintVertical_bias=\"0.272\" />\n\n    <ImageView\n        android:id=\"@+id/imageView2\"\n        android:layout_width=\"101dp\"\n        android:layout_height=\"93dp\"\n        app:srcCompat=\"@drawable/logoapp\"\n        tools:layout_editor_absoluteX=\"155dp\"\n        tools:layout_editor_absoluteY=\"54dp\" />\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision f8f76870653f05a8a677b7a58959a6dd5b5143af)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1719537141761)
+@@ -8,21 +8,88 @@
+     tools:context=".MainActivity">
+ 
+     <TextView
++        android:id="@+id/textView"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+-        android:text="Hello World!"
+-        app:layout_constraintBottom_toBottomOf="parent"
++        android:text="LineManager"
++        android:textSize="34sp"
++        android:textStyle="bold"
++        app:layout_constraintBottom_toTopOf="@+id/imageView"
+         app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.48"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toTopOf="parent"
+-        app:layout_constraintVertical_bias="0.272" />
++        app:layout_constraintVertical_bias="0.521" />
+ 
+     <ImageView
+-        android:id="@+id/imageView2"
+-        android:layout_width="101dp"
+-        android:layout_height="93dp"
+-        app:srcCompat="@drawable/logoapp"
+-        tools:layout_editor_absoluteX="155dp"
+-        tools:layout_editor_absoluteY="54dp" />
++        android:id="@+id/imageView"
++        android:layout_width="177dp"
++        android:layout_height="132dp"
++        android:layout_marginTop="116dp"
++        android:scaleType="centerInside"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.463"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toTopOf="parent"
++        app:srcCompat="@drawable/logoapp" />
++
++    <TextView
++        android:id="@+id/textView9"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="@string/txt_label_nome"
++        app:layout_constraintBottom_toTopOf="@+id/input_nome"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.279"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/imageView"
++        app:layout_constraintVertical_bias="0.884" />
++
++    <EditText
++        android:id="@+id/input_nome"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="88dp"
++        android:ems="10"
++        android:inputType="text"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.353"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/imageView" />
++
++    <TextView
++        android:id="@+id/textView10"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:text="TextView"
++        app:layout_constraintBottom_toTopOf="@+id/input_data"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.217"
++        app:layout_constraintStart_toStartOf="parent" />
++
++    <EditText
++        android:id="@+id/input_data"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:layout_marginTop="88dp"
++        android:ems="10"
++        android:inputType="date"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.35"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/input_nome" />
++
++    <Button
++        android:id="@+id/button"
++        android:layout_width="wrap_content"
++        android:layout_height="wrap_content"
++        android:onClick="trocarTela"
++        android:text="@string/btn_gerar_senha"
++        app:layout_constraintBottom_toBottomOf="parent"
++        app:layout_constraintEnd_toEndOf="parent"
++        app:layout_constraintHorizontal_bias="0.392"
++        app:layout_constraintStart_toStartOf="parent"
++        app:layout_constraintTop_toBottomOf="@+id/input_data"
++        app:layout_constraintVertical_bias="0.21" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file

@@ -1,0 +1,30 @@
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\n<androidx.constraintlayout.widget.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:id=\"@+id/main\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\".MainActivity\">\n\n    <TextView\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"LineManager\"\n        app:layout_constraintBottom_toBottomOf=\"parent\"\n        app:layout_constraintEnd_toEndOf=\"parent\"\n        app:layout_constraintHorizontal_bias=\"0.498\"\n        app:layout_constraintStart_toStartOf=\"parent\"\n        app:layout_constraintTop_toTopOf=\"parent\"\n        app:layout_constraintVertical_bias=\"0.127\" />\n\n    <ImageView\n        android:id=\"@+id/imageView2\"\n        android:layout_width=\"121dp\"\n        android:layout_height=\"123dp\"\n        app:srcCompat=\"@drawable/logoapp\"\n        tools:layout_editor_absoluteX=\"145dp\"\n        tools:layout_editor_absoluteY=\"140dp\" />\n\n    <Button\n        android:id=\"@+id/button\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Gerar Senha\"\n        tools:layout_editor_absoluteX=\"145dp\"\n        tools:layout_editor_absoluteY=\"541dp\" />\n\n    <EditText\n        android:id=\"@+id/editTextText\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:ems=\"10\"\n        android:inputType=\"text\"\n        android:text=\"Nome\"\n        tools:layout_editor_absoluteX=\"100dp\"\n        tools:layout_editor_absoluteY=\"343dp\" />\n\n    <TextView\n        android:id=\"@+id/textView2\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Data de Nascimento\"\n        tools:layout_editor_absoluteX=\"96dp\"\n        tools:layout_editor_absoluteY=\"412dp\" />\n\n    <EditText\n        android:id=\"@+id/editTextDate\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:ems=\"10\"\n        android:inputType=\"date\"\n        android:text=\"dd/mm/aaaa\"\n        tools:layout_editor_absoluteX=\"96dp\"\n        tools:layout_editor_absoluteY=\"431dp\" />\n\n    <TextView\n        android:id=\"@+id/textView3\"\n        android:layout_width=\"wrap_content\"\n        android:layout_height=\"wrap_content\"\n        android:text=\"Preencha seus dados\"\n        tools:layout_editor_absoluteX=\"138dp\"\n        tools:layout_editor_absoluteY=\"311dp\" />\n\n</androidx.constraintlayout.widget.ConstraintLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 4a98d3de4c33b96ede98cc33fc0f24438635b012)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1719537388544)
+@@ -41,7 +41,7 @@
+         android:ems="10"
+         android:inputType="text"
+         android:text="Nome"
+-        tools:layout_editor_absoluteX="100dp"
++        tools:layout_editor_absoluteX="96dp"
+         tools:layout_editor_absoluteY="343dp" />
+ 
+     <TextView
+@@ -67,7 +67,7 @@
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Preencha seus dados"
+-        tools:layout_editor_absoluteX="138dp"
+-        tools:layout_editor_absoluteY="311dp" />
++        tools:layout_editor_absoluteX="96dp"
++        tools:layout_editor_absoluteY="315dp" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
