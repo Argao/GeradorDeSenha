@@ -1,6 +1,7 @@
 package com.example.geradordesenha;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 public class Cliente {
     private String nome;
@@ -39,19 +40,28 @@ public class Cliente {
 
 
     private int calcularIdade(LocalDate dataNascimento) {
-        return LocalDate.now().getYear() - dataNascimento.getYear();
+            LocalDate hoje = LocalDate.now();
+            Period periodo = Period.between(dataNascimento, hoje);
+            return periodo.getYears();
     }
 
     public void gerarSenha(String ultimaSenha) {
-        int Senha  =   Integer.parseInt(ultimaSenha.substring(1)) ;
-        Senha++;
+
+        int senha;
+
+        if (ultimaSenha.isEmpty()) {
+            senha = 0;
+        }else {
+            senha =  Integer.parseInt(ultimaSenha.substring(1)) ;
+            senha++;
+        }
+
         int idade = calcularIdade(dataNascimento);
 
         if(idade < 60) {
-            this.senha = "A" + Senha;
+            this.senha = "A" + senha;
         }else {
-            this.senha = "B" + Senha;
+            this.senha = "B" + senha;
         }
-
     }
 }

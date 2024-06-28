@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -27,16 +28,32 @@ public class Tela2 extends AppCompatActivity {
             return insets;
         });
 
-        Queue<String> fila = new LinkedList<>();
-        fila.add("A0");
-        fila.add("A2");
-        fila.add("B3");
-        fila.add("A4");
+        Queue<Cliente> fila = new LinkedList<>();
+        Cliente c1 = new Cliente("Pedro", LocalDate.of(1990, 1, 1));
+        c1.gerarSenha("");
+        fila.add(c1);
+
+        System.out.println(c1.getSenha());
+        Cliente c2 = new Cliente("Maria", LocalDate.of(2002, 4, 12));
+        c2.gerarSenha(c1.getSenha());
+        fila.add(c2);
+
+        Cliente c3 = new Cliente("João", LocalDate.of(1940, 12, 25));
+        c3.gerarSenha(c2.getSenha());
+        fila.add(c3);
 
         Intent intent = getIntent();
-        Cliente cliente = new Cliente(intent.getStringExtra("nome"), LocalDate.parse(intent.getStringExtra("dataString")));
-        cliente.gerarSenha(fila.peek());
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        Cliente cliente = new Cliente(intent.getStringExtra("nome"), LocalDate.parse(intent.getStringExtra("dataString"), formato));
 
-        fila.add(cliente.getSenha());
+        Cliente ultimoCliente = ((LinkedList<Cliente>) fila).getLast();
+
+        cliente.gerarSenha(ultimoCliente.getSenha());
+
+        fila.add(cliente);
+
+        for ( Cliente cliente1 : fila) {
+            System.out.println(cliente1.getSenha());
+        }
     }
 }
