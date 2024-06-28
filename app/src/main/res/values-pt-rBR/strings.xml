@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GeradorDeSenha</string>
+    <string name="txt_label_nome">Nome:</string>
+    <string name="btn_gerar_senha">Gerar Senha</string>
+</resources>
