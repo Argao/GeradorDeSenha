@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Tela2.class);
         intent.putExtra("nome", nome.getText().toString());
         intent.putExtra("dataString", dataString.getText().toString());
+        intent.putExtra("idade", 20);
         startActivity(intent);
     }
 }

@@ -42,7 +42,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/show_senha"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginStart="193dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/show_prioridade"
         android:layout_width="170dp"
         android:layout_height="40dp"
         android:layout_marginStart="142dp"
@@ -66,5 +66,5 @@
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/show_senha" />
 </androidx.constraintlayout.widget.ConstraintLayout>

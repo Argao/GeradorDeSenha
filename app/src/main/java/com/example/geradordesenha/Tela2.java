@@ -2,6 +2,7 @@ package com.example.geradordesenha;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,6 +18,10 @@ import java.util.Queue;
 
 public class Tela2 extends AppCompatActivity {
 
+    private TextView senhaText;
+    private TextView prioridadeTxt;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,32 +33,42 @@ public class Tela2 extends AppCompatActivity {
             return insets;
         });
 
-        Queue<Cliente> fila = new LinkedList<>();
-        Cliente c1 = new Cliente("Pedro", LocalDate.of(1990, 1, 1));
-        c1.gerarSenha("");
-        fila.add(c1);
+        popularFilaComClientes();
 
-        System.out.println(c1.getSenha());
-        Cliente c2 = new Cliente("Maria", LocalDate.of(2002, 4, 12));
-        c2.gerarSenha(c1.getSenha());
-        fila.add(c2);
-
-        Cliente c3 = new Cliente("João", LocalDate.of(1940, 12, 25));
-        c3.gerarSenha(c2.getSenha());
-        fila.add(c3);
+        senhaText = (TextView) findViewById(R.id.show_senha);
+        prioridadeTxt = (TextView) findViewById(R.id.show_prioridade);
 
         Intent intent = getIntent();
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         Cliente cliente = new Cliente(intent.getStringExtra("nome"), LocalDate.parse(intent.getStringExtra("dataString"), formato));
 
-        Cliente ultimoCliente = ((LinkedList<Cliente>) fila).getLast();
+        Fila.adicionarNaFila(cliente);
 
-        cliente.gerarSenha(ultimoCliente.getSenha());
+        senhaText.setText(cliente.getSenha());
 
-        fila.add(cliente);
-
-        for ( Cliente cliente1 : fila) {
-            System.out.println(cliente1.getSenha());
+        if (cliente.isPrioridade()) {
+            prioridadeTxt.setText("Prioridade: Sim");
+        } else {
+            prioridadeTxt.setText("Prioridade: Não");
         }
+
+
+
     }
+
+
+    private void popularFilaComClientes() {
+        Cliente cliente1 = new Cliente("Cliente 1", LocalDate.of(1990, 1, 1));
+        Cliente cliente2 = new Cliente("Cliente 2", LocalDate.of(1960, 2, 2));
+        Cliente cliente3 = new Cliente("Cliente 3", LocalDate.of(2000, 3, 3));
+        Cliente cliente4 = new Cliente("Cliente 4", LocalDate.of(2010, 4, 4));
+        Cliente cliente5 = new Cliente("Cliente 5", LocalDate.of(1950, 5, 5));
+
+        Fila.adicionarNaFila(cliente1);
+        Fila.adicionarNaFila(cliente2);
+        Fila.adicionarNaFila(cliente3);
+        Fila.adicionarNaFila(cliente4);
+        Fila.adicionarNaFila(cliente5);
+    }
+
 }

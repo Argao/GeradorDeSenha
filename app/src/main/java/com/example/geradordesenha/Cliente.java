@@ -7,13 +7,17 @@ public class Cliente {
     private String nome;
     private LocalDate dataNascimento;
     private String senha;
+    private boolean prioridade;
 
     public Cliente(String nome, LocalDate dataNascimento) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
-        this.senha = null;
+
     }
 
+    public Cliente() {
+
+    }
     public String getNome() {
         return nome;
     }
@@ -38,6 +42,9 @@ public class Cliente {
         this.senha = senha;
     }
 
+    public boolean isPrioridade() {
+        return prioridade;
+    }
 
     private int calcularIdade(LocalDate dataNascimento) {
             LocalDate hoje = LocalDate.now();
@@ -60,8 +67,10 @@ public class Cliente {
 
         if(idade < 60) {
             this.senha = "A" + senha;
+            this.prioridade = false;
         }else {
             this.senha = "B" + senha;
+            this.prioridade = true;
         }
     }
 }
