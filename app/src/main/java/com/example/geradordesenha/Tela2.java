@@ -2,6 +2,7 @@ package com.example.geradordesenha;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -52,8 +53,12 @@ public class Tela2 extends AppCompatActivity {
             prioridadeTxt.setText("Prioridade: Não");
         }
 
+    }
 
 
+    public void trocarTela(View view) {
+        Intent intent = new Intent(this, TelaFilaActivity.class);
+        startActivity(intent);
     }
 
 

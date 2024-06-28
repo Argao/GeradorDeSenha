@@ -58,18 +58,20 @@ public class Cliente {
 
         if (ultimaSenha.isEmpty()) {
             senha = 0;
-        }else {
-            senha =  Integer.parseInt(ultimaSenha.substring(1)) ;
+        } else {
+            senha = Integer.parseInt(ultimaSenha.substring(1));
             senha++;
         }
 
         int idade = calcularIdade(dataNascimento);
 
-        if(idade < 60) {
-            this.senha = "A" + senha;
+        String senhaFormatada = String.format("%04d", senha);
+
+        if (idade < 60) {
+            this.senha = "A" + senhaFormatada;
             this.prioridade = false;
-        }else {
-            this.senha = "B" + senha;
+        } else {
+            this.senha = "B" + senhaFormatada;
             this.prioridade = true;
         }
     }
