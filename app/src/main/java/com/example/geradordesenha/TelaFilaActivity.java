@@ -37,9 +37,7 @@ public class TelaFilaActivity extends AppCompatActivity {
         senha_atual = (TextView) findViewById(R.id.senha_atual);
         nome_atual = (TextView) findViewById(R.id.nome_atual);
 
-
         atualizaTela();
-
     }
 
     public void atualizaTela(){

@@ -53,7 +53,6 @@ public class Cliente {
     }
 
     public void gerarSenha(String ultimaSenha) {
-
         int senha;
 
         if (ultimaSenha.isEmpty()) {
