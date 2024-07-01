@@ -11,6 +11,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.time.LocalDate;
+
 public class MainActivity extends AppCompatActivity {
 
     private EditText nome;
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         });
         nome = (EditText) findViewById(R.id.input_nome);
         dataString = (EditText) findViewById(R.id.input_data);
+
+        popularFilaComClientes();
     }
 
 
@@ -43,5 +47,23 @@ public class MainActivity extends AppCompatActivity {
     public void verFila(View view) {
         Intent intent = new Intent(this, TelaFilaActivity.class);
         startActivity(intent);
+    }
+
+    private  void popularFilaComClientes() {
+
+        if (Fila.getUltimoCliente() == null){
+            Cliente cliente1 = new Cliente("Cliente 1", LocalDate.of(1990, 1, 1));
+            Cliente cliente2 = new Cliente("Cliente 2", LocalDate.of(1960, 2, 2));
+            Cliente cliente3 = new Cliente("Cliente 3", LocalDate.of(2000, 3, 3));
+            Cliente cliente4 = new Cliente("Cliente 4", LocalDate.of(2010, 4, 4));
+            Cliente cliente5 = new Cliente("Cliente 5", LocalDate.of(1950, 5, 5));
+
+            Fila.adicionarNaFila(cliente1);
+            Fila.adicionarNaFila(cliente2);
+            Fila.adicionarNaFila(cliente3);
+            Fila.adicionarNaFila(cliente4);
+            Fila.adicionarNaFila(cliente5);
+        }
+
     }
 }
