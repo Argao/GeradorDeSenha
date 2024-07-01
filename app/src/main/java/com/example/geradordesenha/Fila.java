@@ -29,6 +29,13 @@ public  class Fila {
         }
     }
 
+    public static Cliente verProximoCliente(){
+        if (!filaPrioridade.isEmpty()) {
+            return filaPrioridade.peek();
+        } else {
+            return filaRegular.peek();
+        }
+    }
 
     public static List<Cliente> verProximosClientes(int quantidade){
         List<Cliente> proximosClientes = new ArrayList<>();

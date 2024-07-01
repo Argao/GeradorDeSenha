@@ -39,15 +39,15 @@ public class TelaFilaActivity extends AppCompatActivity {
         senha_atual = (TextView) findViewById(R.id.senha_atual);
         nome_atual = (TextView) findViewById(R.id.nome_atual);
 
-        atualizaTela();
+        Cliente cliente = Fila.verProximoCliente();
+        atualizaTela(cliente);
     }
 
-    public void atualizaTela(){
+    public void atualizaTela(Cliente cliente){
 
-        Cliente atual = Fila.getUltimoCliente();
-        if (atual != null) {
-            senha_atual.setText(atual.getSenha());
-            nome_atual.setText(atual.getNome());
+        if (cliente != null) {
+            senha_atual.setText(cliente.getSenha());
+            nome_atual.setText(cliente.getNome());
         } else {
             senha_atual.setText("N/A");
             nome_atual.setText("N/A");
@@ -63,5 +63,10 @@ public class TelaFilaActivity extends AppCompatActivity {
     public void voltarTelaInicial(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void andarFila(View view) {
+        Cliente cliente = Fila.getUltimoCliente();
+        atualizaTela(cliente);
     }
 }
