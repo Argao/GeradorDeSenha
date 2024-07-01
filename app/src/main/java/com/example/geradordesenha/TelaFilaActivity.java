@@ -1,6 +1,8 @@
 package com.example.geradordesenha;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -53,4 +55,8 @@ public class TelaFilaActivity extends AppCompatActivity {
         if(proximosClientes.size() > 3) quarto_na_fila.setText(proximosClientes.get(3).getSenha());
     }
 
+    public void voltarTelaInicial(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
 }

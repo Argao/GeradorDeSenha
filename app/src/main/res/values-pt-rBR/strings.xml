@@ -3,4 +3,11 @@
     <string name="app_name">GeradorDeSenha</string>
     <string name="txt_label_nome">Nome:</string>
     <string name="btn_gerar_senha">Gerar Senha</string>
+    <string name="txt_label_data">Nascimento:</string>
+    <string name="btn_ver_fila">Ver Fila</string>
+    <string name="txt_senha_gerada">Senha Gerada</string>
+    <string name="txt_prioridade_sim">Prioridade: Sim</string>
+    <string name="txt_prioridade_nao">Prioridade: Não</string>
+    <string name="txt_proximas_senhas">Proximas Senhas</string>
+    <string name="btn_gerar_outra_senha">Gerar Outra Senha</string>
 </resources>

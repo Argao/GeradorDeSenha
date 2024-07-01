@@ -11,23 +11,23 @@
         android:id="@+id/senha_atual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="52dp"
         android:text="Senha Atual"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/nome_atual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.341"
+        app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/nome_atual"
         android:layout_width="115dp"
         android:layout_height="18dp"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="228dp"
         android:text="Nome da Pessoa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintHorizontal_bias="0.31"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -67,7 +67,7 @@
         android:id="@+id/fila1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="116dp"
+        android:layout_marginTop="64dp"
         android:text="Senha 1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.329"
@@ -78,10 +78,21 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="Proximas Senhas"
+        android:layout_marginTop="28dp"
+        android:text="@string/txt_proximas_senhas"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="167dp"
+        android:layout_height="44dp"
+        android:onClick="voltarTelaInicial"
+        android:text="@string/btn_gerar_outra_senha"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="569dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

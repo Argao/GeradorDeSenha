@@ -9,16 +9,15 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="100dp"
-        android:layout_height="70dp"
+        android:layout_width="134dp"
+        android:layout_height="61dp"
         android:layout_marginStart="161dp"
         android:layout_marginEnd="162dp"
         android:layout_marginBottom="124dp"
         android:onClick="trocarTela"
-        android:text="Ver Fila"
+        android:text="@string/btn_ver_fila"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.916"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -39,7 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Senha Gerada"
+        android:text="@string/txt_senha_gerada"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

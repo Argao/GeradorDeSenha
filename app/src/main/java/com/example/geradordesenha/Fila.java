@@ -1,5 +1,6 @@
 package com.example.geradordesenha;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -50,4 +51,5 @@ public  class Fila {
     private static void gerarSenha(Cliente cliente){
         cliente.gerarSenha(ultimaSenha);
     }
+
 }

@@ -2,4 +2,11 @@
     <string name="app_name">GeradorDeSenha</string>
     <string name="txt_label_nome">Name:</string>
     <string name="btn_gerar_senha">Generate Ticket</string>
+    <string name="txt_label_data">Birth date:</string>
+    <string name="btn_ver_fila">Queue</string>
+    <string name="txt_senha_gerada">Generated Ticket</string>
+    <string name="txt_prioridade_sim">Priority: Yes</string>
+    <string name="txt_prioridade_nao">Priority: No</string>
+    <string name="txt_proximas_senhas">Next Tickets</string>
+    <string name="btn_gerar_outra_senha">Generate a new ticket</string>
 </resources>
