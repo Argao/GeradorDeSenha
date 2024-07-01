@@ -11,8 +11,6 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.time.LocalDate;
-
 public class MainActivity extends AppCompatActivity {
 
     private EditText nome;
@@ -35,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void verSenhaGerada(View view) {
-        Intent intent = new Intent(this, Tela2.class);
+        Intent intent = new Intent(this, SenhaGeradaActivity.class);
         intent.putExtra("nome", nome.getText().toString());
         intent.putExtra("dataString", dataString.getText().toString());
         intent.putExtra("idade", 20);

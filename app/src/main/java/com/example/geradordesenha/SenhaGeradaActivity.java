@@ -13,11 +13,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
-public class Tela2 extends AppCompatActivity {
+public class SenhaGeradaActivity extends AppCompatActivity {
 
     private TextView senhaText;
     private TextView prioridadeTxt;
@@ -27,7 +24,7 @@ public class Tela2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tela2);
+        setContentView(R.layout.activity_senha_gerada);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);

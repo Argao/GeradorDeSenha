@@ -16,7 +16,7 @@
             android:name=".TelaFilaActivity"
             android:exported="false" />
         <activity
-            android:name=".Tela2"
+            android:name=".SenhaGeradaActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
