@@ -45,8 +45,13 @@ public class TelaFilaActivity extends AppCompatActivity {
     public void atualizaTela(){
 
         Cliente atual = Fila.getUltimoCliente();
-        senha_atual.setText(atual.getSenha());
-        nome_atual.setText(atual.getNome());
+        if (atual != null) {
+            senha_atual.setText(atual.getSenha());
+            nome_atual.setText(atual.getNome());
+        } else {
+            senha_atual.setText("N/A");
+            nome_atual.setText("N/A");
+        }
 
         List<Cliente> proximosClientes = Fila.verProximosClientes(4);
         if(!proximosClientes.isEmpty()) primeiro_na_fila.setText(proximosClientes.get(0).getSenha());
