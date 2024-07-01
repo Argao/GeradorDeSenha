@@ -11,44 +11,42 @@
         android:id="@+id/senha_atual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="36dp"
         android:text="Senha Atual"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/nome_atual"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/nome_atual"
         android:layout_width="115dp"
         android:layout_height="18dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginBottom="136dp"
         android:text="Nome da Pessoa"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintHorizontal_bias="0.594"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/fila4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="44dp"
         android:text="Senha 4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fila3" />
+        app:layout_constraintTop_toTopOf="@+id/fila3"
+        tools:layout_editor_absoluteX="104dp" />
 
     <TextView
         android:id="@+id/fila3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:text="Senha 3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fila2" />
 
@@ -56,10 +54,10 @@
         android:id="@+id/fila2"
         android:layout_width="59dp"
         android:layout_height="19dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:text="Senha 2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.338"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fila1" />
 
@@ -67,10 +65,10 @@
         android:id="@+id/fila1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:text="Senha 1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.329"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
@@ -82,17 +80,19 @@
         android:text="@string/txt_proximas_senhas"
         android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="167dp"
-        android:layout_height="44dp"
+        android:layout_width="197dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="124dp"
         android:onClick="voltarTelaInicial"
         android:text="@string/btn_gerar_outra_senha"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="569dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
