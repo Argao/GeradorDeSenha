@@ -12,4 +12,5 @@
     <string name="btn_gerar_outra_senha">Gerar Outra Senha</string>
     <string name="btn_andar_Fila">Andar Fila</string>
     <string name="txt_Label_Senha_Atual">Senha Atual</string>
+    <string name="txt_vazio">Vazio</string>
 </resources>

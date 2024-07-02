@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         nome = (EditText) findViewById(R.id.input_nome);
         dataString = (EditText) findViewById(R.id.input_data);
 
-        popularFilaComClientes();
+//        popularFilaComClientes();
     }
 
 

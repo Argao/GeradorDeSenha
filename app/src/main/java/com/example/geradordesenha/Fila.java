@@ -48,7 +48,7 @@ public  class Fila {
             } else if (!filaRegularTemp.isEmpty()) {
                 proximosClientes.add(filaRegularTemp.poll().getSenha());
             } else {
-                proximosClientes.add("N/A");
+                proximosClientes.add("-");
             }
         }
 

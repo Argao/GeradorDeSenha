@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GeradorDeSenha</string>
+    <string name="app_name">Line Manager</string>
     <string name="txt_label_nome">Name:</string>
     <string name="btn_gerar_senha">Generate Ticket</string>
     <string name="txt_label_data">Birth date:</string>
@@ -11,4 +11,5 @@
     <string name="btn_gerar_outra_senha">Generate a new ticket</string>
     <string name="btn_andar_Fila">Next</string>
     <string name="txt_Label_Senha_Atual">First in Line</string>
+    <string name="txt_vazio">Empty</string>
 </resources>
