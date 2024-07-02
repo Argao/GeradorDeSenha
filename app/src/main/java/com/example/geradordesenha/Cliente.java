@@ -56,7 +56,7 @@ public class Cliente {
         int senha;
 
         if (ultimaSenha.isEmpty()) {
-            senha = 0;
+            senha = 1;
         } else {
             senha = Integer.parseInt(ultimaSenha.substring(1));
             senha++;

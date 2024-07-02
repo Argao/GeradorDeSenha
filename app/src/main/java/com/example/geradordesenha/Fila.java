@@ -37,18 +37,18 @@ public  class Fila {
         }
     }
 
-    public static List<Cliente> verProximosClientes(int quantidade){
-        List<Cliente> proximosClientes = new ArrayList<>();
+    public static List<String> verProximosClientes(int quantidade){
+        List<String> proximosClientes = new ArrayList<>();
         LinkedList<Cliente> filaPrioridadeTemp = new LinkedList<>(filaPrioridade);
         LinkedList<Cliente> filaRegularTemp = new LinkedList<>(filaRegular);
 
         while (proximosClientes.size() < quantidade) {
             if (!filaPrioridadeTemp.isEmpty()) {
-                proximosClientes.add(filaPrioridadeTemp.poll());
+                proximosClientes.add(filaPrioridadeTemp.poll().getSenha());
             } else if (!filaRegularTemp.isEmpty()) {
-                proximosClientes.add(filaRegularTemp.poll());
+                proximosClientes.add(filaRegularTemp.poll().getSenha());
             } else {
-                break;
+                proximosClientes.add("N/A");
             }
         }
 

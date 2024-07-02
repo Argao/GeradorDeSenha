@@ -39,11 +39,12 @@ public class TelaFilaActivity extends AppCompatActivity {
         senha_atual = (TextView) findViewById(R.id.senha_atual);
         nome_atual = (TextView) findViewById(R.id.nome_atual);
 
-        Cliente cliente = Fila.verProximoCliente();
-        atualizaTela(cliente);
+
+        atualizaTela();
     }
 
-    public void atualizaTela(Cliente cliente){
+    public void atualizaTela(){
+        Cliente cliente = Fila.getUltimoCliente();
 
         if (cliente != null) {
             senha_atual.setText(cliente.getSenha());
@@ -53,11 +54,12 @@ public class TelaFilaActivity extends AppCompatActivity {
             nome_atual.setText("N/A");
         }
 
-        List<Cliente> proximosClientes = Fila.verProximosClientes(4);
-        if(!proximosClientes.isEmpty()) primeiro_na_fila.setText(proximosClientes.get(0).getSenha());
-        if(proximosClientes.size() > 1) segundo_na_fila.setText(proximosClientes.get(1).getSenha());
-        if(proximosClientes.size() > 2) terceiro_na_fila.setText(proximosClientes.get(2).getSenha());
-        if(proximosClientes.size() > 3) quarto_na_fila.setText(proximosClientes.get(3).getSenha());
+        List<String> proximosClientes = Fila.verProximosClientes(4);
+
+        primeiro_na_fila.setText(proximosClientes.get(0));
+        segundo_na_fila.setText(proximosClientes.get(1));
+        terceiro_na_fila.setText(proximosClientes.get(2));
+        quarto_na_fila.setText(proximosClientes.get(3));
     }
 
     public void voltarTelaInicial(View view) {
@@ -65,8 +67,8 @@ public class TelaFilaActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void andarFila(View view) {
-        Cliente cliente = Fila.getUltimoCliente();
-        atualizaTela(cliente);
+
+    public void andaFila(View view) {
+        atualizaTela();
     }
 }
