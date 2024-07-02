@@ -50,8 +50,8 @@ public class TelaFilaActivity extends AppCompatActivity {
             senha_atual.setText(cliente.getSenha());
             nome_atual.setText(cliente.getNome());
         } else {
-            senha_atual.setText("N/A");
-            nome_atual.setText("N/A");
+            senha_atual.setText("-");
+            nome_atual.setText("-");
         }
 
         List<String> proximosClientes = Fila.verProximosClientes(4);

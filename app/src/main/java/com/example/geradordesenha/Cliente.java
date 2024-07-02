@@ -12,7 +12,6 @@ public class Cliente {
     public Cliente(String nome, LocalDate dataNascimento) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
-
     }
 
     public Cliente() {

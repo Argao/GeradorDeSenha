@@ -12,7 +12,7 @@ public  class Fila {
     private static String ultimaSenha = "";
 
     public static void adicionarNaFila(Cliente cliente){
-        gerarSenha(cliente);
+        cliente.gerarSenha(ultimaSenha);
         ultimaSenha = cliente.getSenha();
         if (cliente.getSenha().startsWith("B")) {
             filaPrioridade.add(cliente);
@@ -54,9 +54,4 @@ public  class Fila {
 
         return proximosClientes;
     }
-
-    private static void gerarSenha(Cliente cliente){
-        cliente.gerarSenha(ultimaSenha);
-    }
-
 }

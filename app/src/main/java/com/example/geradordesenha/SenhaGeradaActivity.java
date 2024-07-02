@@ -52,10 +52,6 @@ public class SenhaGeradaActivity extends AppCompatActivity {
     }
 
 
-    public void trocarTela(View view) {
-        Intent intent = new Intent(this, TelaFilaActivity.class);
-        startActivity(intent);
-    }
 
     private  void popularFilaComClientes() {
 

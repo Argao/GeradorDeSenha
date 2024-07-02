@@ -38,9 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void verSenhaGerada(View view) {
         Intent intent = new Intent(this, SenhaGeradaActivity.class);
-        intent.putExtra("nome", nome.getText().toString());
+        intent.putExtra("nome",  nome.getText().toString());
         intent.putExtra("dataString", dataString.getText().toString());
-        intent.putExtra("idade", 20);
         startActivity(intent);
     }
 
