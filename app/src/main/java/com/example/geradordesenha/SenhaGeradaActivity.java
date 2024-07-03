@@ -70,4 +70,8 @@ public class SenhaGeradaActivity extends AppCompatActivity { // Declara a classe
 
     }
 
+    public void voltarTela(View view) {
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+    }
 }
