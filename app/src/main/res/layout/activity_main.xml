@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#A84EA5BA"
+    android:background="@color/ic_launcher_background"
     tools:context=".MainActivity">
 
     <TextView
@@ -66,7 +66,7 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/input_data"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintHorizontal_bias="0.305"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
@@ -90,24 +90,27 @@
         android:onClick="verSenhaGerada"
         android:shadowColor="@color/black"
         android:text="@string/btn_gerar_senha"
+        android:textColor="@color/white"
         android:textColorLink="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_data"
-        app:layout_constraintVertical_bias="0.23"
+        app:layout_constraintVertical_bias="0.142"
         app:rippleColor="@color/white" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="126dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="88dp"
         android:backgroundTint="@color/icon_color"
         android:onClick="verFila"
         android:text="@string/btn_ver_fila"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
